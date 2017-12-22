@@ -16,6 +16,16 @@ class GeoSystemServiceProvider extends ServiceProvider
     public function boot(Dispatcher $events)
     {
         $this->loadViewsFrom(__DIR__ . '/views', 'geo');
+       
+        $this->loadMigrationsFrom(__DIR__ . '/migrations');
+
+        $this->publishes([
+            __DIR__ . '/views' => resource_path('views/vendor/geo'),
+        ],'geo-views');
+
+        $this->publishes([
+            __DIR__ . '/migrations' => database_path('migrations'),
+        ], 'geo-migrations');
 
         $this->loadRoutesFrom(__DIR__ . '/routes.php');
 
