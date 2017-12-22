@@ -1,6 +1,6 @@
 {
-    "name": "geo/geosystem",
-    "description": "geo system",
+    "name": "geopackage/geosystem",
+    "description": "geopackage system",
     "type": "package",
     "version":"1.0.0",
     "license": "MIT",
