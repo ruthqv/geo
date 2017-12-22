@@ -1,0 +1,33 @@
+{
+    "name": "geo/geosystem",
+    "description": "geo system",
+    "type": "package",
+    "version":"1.0.0",
+    "license": "MIT",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "geo\\geosystem\\GeoSystemServiceProvider"
+            ],
+            "aliases": {
+                "geo": "geo\\geosystem\\Facade"
+             }
+          }
+    },
+    "authors": [{
+        "name": "ruthqv",
+        "email": "rqvaquero@gmail.com"
+    }],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.6.4"
+
+
+    },
+    "autoload": {
+        "psr-4": {
+            "geo\\geosystem\\": "src/"
+
+        }
+    }
+}
